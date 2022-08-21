@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: assgn
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-assgn
+  namespace: assgn
+spec:
+  selector:
+    matchLabels:
+      run: demo-assgn
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: demo-assgn
+    spec:
+      containers:
+        - image: sah8145/demo-assgn:1
+          name: demo-assgn
+          ports:
+          - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-assgn
+  labels:
+    run: demo-assgn
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 32400
+  type: NodePort
+  selector:
+    run: demo-assgn
