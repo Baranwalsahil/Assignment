@@ -18,7 +18,7 @@ If you are running a cluster in Google Container Engine (GKE), instead see the [
 
 ### Step Zero: Prerequisites <a id="step-zero"></a>
 
-This example assumes that you have a working cluster. See the [Getting Started Guides](https://kubernetes.io/docs/setup/) for details about creating a cluster.
+This example assume that you have a working cluster. See the [Getting Started Guides](https://kubernetes.io/docs/setup/) for details about creating a cluster.
 
 **Tip:** View all the `kubectl` commands, including their options and descriptions in the [kubectl CLI reference](https://kubernetes.io/docs/user-guide/kubectl-overview/).
 
