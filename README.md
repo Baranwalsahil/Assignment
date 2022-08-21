@@ -4,7 +4,7 @@ This example shows how to build a simple multi-tier web application using Kubern
 
 If you are running a cluster in Google Container Engine (GKE), instead see the [Guestbook Example for Google Container Engine](https://cloud.google.com/container-engine/docs/tutorials/guestbook).
 
-##### Table of Contents
+#### Table of Contents
 
  * [Step Zero: Prerequisites](#step-zero)
  * [Step One: Create the Redis master pod](#step-one)
