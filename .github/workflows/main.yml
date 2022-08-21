@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build a Docker Image
+        run: |
+          docker login -u sah814 -p dckr_pat_t7xw2fbwfB5wQ_i3kv1gwS3d7aY
+          docker build -t sah8145/demo-assgn:1 .
+          docker push sah8145/demo-assgn:1
