@@ -16,6 +16,6 @@ jobs:
 
       - name: Build a Docker Image
         run: |
-          docker login -u sah8145 -p dckr_pat_t7xw2fbwfB5wQ_i3kv1gwS3d7aY
+          docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker build -t sah8145/demo-assgn:1 .
           docker push sah8145/demo-assgn:1
